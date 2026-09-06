@@ -1,0 +1,9 @@
+{
+  "name": "CLOUND MARKET",
+  "short_name": "CLOUND",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#080d1a",
+  "theme_color": "#0b1020",
+  "description": "CLOUND MARKET - Hosting SA-MP, Minecraft dan Bot JS"
+}

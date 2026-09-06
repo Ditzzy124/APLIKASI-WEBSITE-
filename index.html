@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b1020">
+<meta name="description" content="CLOUND MARKET - Hosting SA-MP, Minecraft dan Bot JS">
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+<title>CLOUND MARKET</title>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#">☁️ CLOUND <span>MARKET</span></a>
+  <button id="installBtn" class="small-btn" hidden>📲 Install</button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="badge">☁️ CLOUD • GAME • BOT HOSTING</div>
+  <h1>CLOUND MARKET</h1>
+  <p>Hosting SA-MP, Minecraft, Bot JS dan layanan server.</p>
+  <div class="actions">
+    <a href="#produk" class="btn">Lihat Produk</a>
+    <button class="btn secondary" onclick="showAuth('register')">Daftar Akun</button>
+  </div>
+</section>
+
+<section id="produk" class="section">
+  <h2>🔥 Produk Hosting</h2>
+  <div class="grid">
+    <article class="card"><h3>🎮 SA-MP 1GB</h3><p>RAM 1GB • CPU 100% • Slot fleksibel</p><b>Rp10.000</b><button onclick="order('SA-MP 1GB - Rp10.000')">Order</button></article>
+    <article class="card"><h3>🎮 SA-MP 2GB</h3><p>RAM 2GB • CPU 200% • Slot fleksibel</p><b>Rp20.000</b><button onclick="order('SA-MP 2GB - Rp20.000')">Order</button></article>
+    <article class="card"><h3>⛏️ Minecraft 2GB</h3><p>RAM 2GB • Server Minecraft</p><b>Rp20.000</b><button onclick="order('Minecraft 2GB - Rp20.000')">Order</button></article>
+    <article class="card"><h3>🤖 Bot JS 1GB</h3><p>Node.js • Cocok untuk bot</p><b>Rp10.000</b><button onclick="order('Bot JS 1GB - Rp10.000')">Order</button></article>
+  </div>
+</section>
+
+<section class="section payment">
+  <h2>💳 Pembayaran</h2>
+  <div class="payment-box">
+    <strong>DANA</strong>
+    <span>085960162554</span>
+    <button onclick="copyDana()">📋 Salin Nomor DANA</button>
+    <small id="copyStatus"></small>
+  </div>
+</section>
+
+<section class="section">
+  <h2>👤 Akun</h2>
+  <div id="accountArea" class="account-box">
+    <p>Belum login.</p>
+    <button class="btn" onclick="showAuth('login')">Login</button>
+    <button class="btn secondary" onclick="showAuth('register')">Registrasi User</button>
+    <button class="btn admin" onclick="showAuth('admin')">Login Admin</button>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="year"></span> CLOUND MARKET</footer>
+
+<div id="authModal" class="modal hidden">
+  <div class="modal-card">
+    <button class="close" onclick="closeAuth()">×</button>
+    <h2 id="authTitle">Login</h2>
+    <form id="authForm">
+      <label>Username</label>
+      <input id="username" required autocomplete="username">
+      <label>Password</label>
+      <input id="password" type="password" required autocomplete="current-password">
+      <div id="regHint" class="hint"></div>
+      <button class="btn full" type="submit">Lanjut</button>
+    </form>
+    <p id="authMessage" class="message"></p>
+    <div class="switch">
+      <button onclick="showAuth('login')">Login User</button>
+      <button onclick="showAuth('register')">Registrasi User</button>
+      <button onclick="showAuth('admin')">Login Admin</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
